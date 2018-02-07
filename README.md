@@ -3,7 +3,7 @@
 > 对应源码记录在source目录下
 
 ### 本项目结构一栏
-> 项目具体说明请访问：[source/README.md](source/README.md)
+> 项目具体说明请访问：[source](source)
 
 ```
 java
