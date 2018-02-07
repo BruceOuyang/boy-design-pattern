@@ -2,7 +2,7 @@
 > Bruce Ouyang 正在读[《设计模式Java版——刘伟大神》](http://gof.quanke.name/)这本书
 > 对应源码记录在source目录下
 
-### 结构一栏
+### 本结构一栏
 > 项目具体说明请访问：[source/README.md](source/README.md)
 
 ```
