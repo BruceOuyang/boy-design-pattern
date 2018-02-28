@@ -1,11 +1,5 @@
 # Boy Learning Design-Pattern
-> 这里有每一个模式对应的源码
-
-设计模式分为三种类型：
-* 创建型模式 Creation Pattern
-* 结构型模式 Structural Pattern
-* 行为型模式 Behavioral Pattern
-
+> 这里有每一个模式对应的源码  
 源码的结构也按照这三种类型来组成
 
 ### 结构一栏
