@@ -7,7 +7,7 @@
 * 结构型模式 Structural Pattern
 * 行为型模式 Behavioral Pattern
 
-![](assets/images/24designpattern_by_bruce@bugmakers.club.png)
+![](assets/images/baidu_naotu/24designpattern_by_bruce@bugmakers.club.png)
 
 > 项目具体说明请访问：[source](source)
 
