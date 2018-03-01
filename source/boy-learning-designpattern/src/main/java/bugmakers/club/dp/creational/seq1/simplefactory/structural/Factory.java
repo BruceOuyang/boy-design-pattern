@@ -1,4 +1,4 @@
-package bugmakers.club.dp.creational.seq1.simplefactory;
+package bugmakers.club.dp.creational.seq1.simplefactory.structural;
 
 /**
  * @Description: 简单工厂类

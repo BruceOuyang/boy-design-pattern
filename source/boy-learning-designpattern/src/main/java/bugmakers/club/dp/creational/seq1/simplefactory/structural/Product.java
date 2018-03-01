@@ -1,4 +1,4 @@
-package bugmakers.club.dp.creational.seq1.simplefactory;
+package bugmakers.club.dp.creational.seq1.simplefactory.structural;
 
 /**
  * @Description: 抽象产品类
@@ -12,6 +12,7 @@ public abstract class Product {
      */
     public void methodSame() {
         // 公共方法的实现
+        System.out.println("抽象产品的公共业务处理");
     }
 
     /**
