@@ -1,38 +1,38 @@
 # 结构型模式 Structural Pattern
 
 * 七个结构型模式
-  * [适配器模式-Adapter Pattern](seq1/adapter/README.md)
+  * [适配器模式-Adapter Pattern](seq1/adapter)
     * 不兼容结构的协调——适配器模式（一）
     * 不兼容结构的协调——适配器模式（二）
     * 不兼容结构的协调——适配器模式（三）
     * 不兼容结构的协调——适配器模式（四）
-  * [桥接模式-Bridge Pattern](seq2/bridge/README.md)
+  * [桥接模式-Bridge Pattern](seq2/bridge)
     * 处理多维度变化——桥接模式（一）
     * 处理多维度变化——桥接模式（二）
     * 处理多维度变化——桥接模式（三）
     * 处理多维度变化——桥接模式（四）
-  * [组合模式-Composite Pattern](seq3/composite/README.md)
+  * [组合模式-Composite Pattern](seq3/composite)
     * 树形结构的处理——组合模式（一）
     * 树形结构的处理——组合模式（二）
     * 树形结构的处理——组合模式（三）
     * 树形结构的处理——组合模式（四）
     * 树形结构的处理——组合模式（五）
-  * [装饰模式-Decorator Pattern](seq4/decorator/README.md)
+  * [装饰模式-Decorator Pattern](seq4/decorator)
     * 扩展系统功能——装饰模式（一）
     * 扩展系统功能——装饰模式（二）
     * 扩展系统功能——装饰模式（三）
     * 扩展系统功能——装饰模式（四）
-  * [外观模式-Facade Pattern](seq5/facade/README.md)
+  * [外观模式-Facade Pattern](seq5/facade)
     * 深入浅出外观模式（一）
     * 深入浅出外观模式（二）
     * 深入浅出外观模式（三）
-  * [享元模式-Flyweight Pattern](seq6/flyweight/README.md)
+  * [享元模式-Flyweight Pattern](seq6/flyweight)
     * 实现对象的复用——享元模式（一）
     * 实现对象的复用——享元模式（二）
     * 实现对象的复用——享元模式（三）
     * 实现对象的复用——享元模式（四）
     * 实现对象的复用——享元模式（五）
-  * [代理模式-Proxy Pattern](seq7/proxy/README.md)
+  * [代理模式-Proxy Pattern](seq7/proxy)
     * 设计模式之代理模式（一）
     * 设计模式之代理模式（二）
     * 设计模式之代理模式（三）
