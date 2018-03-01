@@ -1,8 +1,7 @@
-package bugmakers.club.dp.creational.seq1.simplefactory.demo_optimized;
+package bugmakers.club.dp.creational.seq1.simplefactory.demooptimized;
 
 import bugmakers.club.dp.creational.seq1.simplefactory.demo.Chart;
 import bugmakers.club.dp.creational.seq1.simplefactory.demo.ChartFactory;
-import bugmakers.club.dp.creational.seq1.simplefactory.demooptimized.XMLUtil;
 
 /**
  * @Description: 简单工厂客户端实例优化客户端
