@@ -1,1 +1,0 @@
-# 外观模式 Façade Pattern

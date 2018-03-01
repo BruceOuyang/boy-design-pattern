@@ -22,7 +22,7 @@ public class XMLUtil {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("config-repo/creational/seq1/simplefactory/config.xml"));
+            doc = builder.parse(new File("config-repo/creational/seq1/simplefactory/simple-factory-config.xml"));
 
             //获取包含图表类型的文本节点
             NodeList nl = doc.getElementsByTagName("chartType");
