@@ -8,23 +8,40 @@ package bugmakers.club.dp.creational.seq1.simplefactory.demo;
 public class ChartFactory {
 
     /**
+     * 柱状图
+     */
+    private static final String HISTOGRAM = "histogram";
+    /**
+     * 饼状图
+     */
+    private static final String PIE = "pie";
+    /**
+     * 折线图
+     */
+    private static final String LINE = "line";
+
+    /**
      * 静态工厂方法
      * @param type
      * @return
      */
     public static Chart getChart(String type) {
+
         Chart chart = null;
-        if (type.equalsIgnoreCase("histogram")) {
+        if (HISTOGRAM.equalsIgnoreCase(type)) {
             chart = new HistogramChart();
             System.out.println("初始化设置柱状图！");
         }
-        else if (type.equalsIgnoreCase("pie")) {
+        else if (PIE.equalsIgnoreCase(type)) {
             chart = new PieChart();
             System.out.println("初始化设置饼状图！");
         }
-        else if (type.equalsIgnoreCase("line")) {
+        else if (LINE.equalsIgnoreCase(type)) {
             chart = new LineChart();
             System.out.println("初始化设置折线图！");
+        }
+        else {
+            System.out.println("不支持的统计图类型");
         }
         return chart;
     }
