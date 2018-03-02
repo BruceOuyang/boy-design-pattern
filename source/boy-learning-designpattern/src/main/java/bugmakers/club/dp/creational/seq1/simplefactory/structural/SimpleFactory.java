@@ -5,23 +5,23 @@ package bugmakers.club.dp.creational.seq1.simplefactory.structural;
  * @Author: Bruce
  * @Datetime: 2018/3/1 15:24
  */
-public class Factory {
+public class SimpleFactory {
 
     /**
      * 静态工厂方法
      * @param arg
      * @return
      */
-    public static Product getProduct(String arg) {
-        Product product = null;
+    public static AbstractProduct getProduct(String arg) {
+        AbstractProduct abstractProduct = null;
         if (arg.equalsIgnoreCase("A")) {
-            product = new ConcreteProductA();
+            abstractProduct = new ConcreteAbstractProductA();
             //初始化设置product
         }
         else if (arg.equalsIgnoreCase("B")) {
-            product = new ConcreteProductB();
+            abstractProduct = new ConcreteAbstractProductB();
             //初始化设置product
         }
-        return product;
+        return abstractProduct;
     }
 }

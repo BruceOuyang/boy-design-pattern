@@ -104,16 +104,16 @@ class ConcreteProduct extends Product {
 class Factory {  
     //静态工厂方法  
     public static Product getProduct(String arg) {  
-        Product product = null;  
+        Product abstractProduct = null;  
         if (arg.equalsIgnoreCase("A")) {  
-            product = new ConcreteProductA();  
+            abstractProduct = new ConcreteProductA();  
             //初始化设置product  
         }  
         else if (arg.equalsIgnoreCase("B")) {  
-            product = new ConcreteProductB();  
+            abstractProduct = new ConcreteProductB();  
             //初始化设置product  
         }  
-        return product;  
+        return abstractProduct;  
     }  
 }
 ```
@@ -122,10 +122,10 @@ class Factory {
 ```java
 class Client {  
     public static void main(String args[]) {  
-        Product product;   
-        product = Factory.getProduct("A"); //通过工厂类创建产品对象  
-        product.methodSame();  
-        product.methodDiff();  
+        Product abstractProduct;   
+        abstractProduct = Factory.getProduct("A"); //通过工厂类创建产品对象  
+        abstractProduct.methodSame();  
+        abstractProduct.methodDiff();  
     }  
 }
 ```

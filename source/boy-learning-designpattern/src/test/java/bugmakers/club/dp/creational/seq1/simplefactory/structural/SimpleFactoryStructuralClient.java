@@ -8,11 +8,11 @@ package bugmakers.club.dp.creational.seq1.simplefactory.structural;
 public class SimpleFactoryStructuralClient {
 
     public static void main(String args[]) {
-        Product product;
+        AbstractProduct abstractProduct;
 
         //通过工厂类创建产品对象
-        product = Factory.getProduct("A");
-        product.methodSame();
-        product.methodDiff();
+        abstractProduct = SimpleFactory.getProduct("A");
+        abstractProduct.methodSame();
+        abstractProduct.methodDiff();
     }
 }

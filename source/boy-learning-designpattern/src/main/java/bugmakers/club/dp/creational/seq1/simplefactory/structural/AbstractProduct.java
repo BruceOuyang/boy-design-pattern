@@ -5,7 +5,7 @@ package bugmakers.club.dp.creational.seq1.simplefactory.structural;
  * @Author: Bruce
  * @Datetime: 2018/3/1 15:20
  */
-public abstract class Product {
+public abstract class AbstractProduct {
 
     /**
      * 所有产品类的公共业务方法

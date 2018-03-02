@@ -5,7 +5,7 @@ package bugmakers.club.dp.creational.seq1.simplefactory.structural;
  * @Author: Bruce
  * @Datetime: 2018/3/1 15:22
  */
-public class ConcreteProductB extends Product {
+public class ConcreteAbstractProductB extends AbstractProduct {
 
     /**
      * 实现业务方法

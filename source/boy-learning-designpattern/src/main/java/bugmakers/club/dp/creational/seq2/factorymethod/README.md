@@ -99,8 +99,8 @@ class ConcreteFactory implements Factory {
 Factory factory;  
 //可通过配置文件实现  
 factory = new ConcreteFactory(); 
-Product product;  
-product = factory.factoryMethod();  
+Product abstractProduct;  
+abstractProduct = factory.factoryMethod();  
 ```  
 
 可以通过配置文件来存储具体工厂类ConcreteFactory的类名，更换新的具体工厂时无须修改源代码，系统扩展更为方便。  
