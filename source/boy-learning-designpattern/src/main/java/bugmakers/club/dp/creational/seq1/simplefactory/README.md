@@ -66,7 +66,7 @@ class Chart {
 简单工厂模式(Simple Factory Pattern)：定义一个工厂类，它可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类。因为在简单工厂模式中用于创建实例的方法是静态(static)方法，因此简单工厂模式又被称为静态工厂方法(Static Factory Method)模式，它属于类创建型模式。  
 
 简单工厂模式的要点在于：当你需要什么，只需要传入一个正确的参数，就可以获取你所需要的对象，而无须知道其创建细节。简单工厂模式结构比较简单，其核心是工厂类的设计，其结构如图1所示：  
-![图1 简单工厂模式结构](../../../../../../../../../../../assets/images/creational/simple_factory/simple-factory-uml.jpg)  
+![图1 简单工厂模式结构](../../../../../../../../../../../assets/images/creational/seq1_simple_factory/simple-factory-uml.jpg)  
 图1 简单工厂模式结构图  
 
 在简单工厂模式结构图中包含如下几个角色：  
@@ -134,7 +134,7 @@ class Client {
 3 完整解决方案  
 
 为了将Chart类的职责分离，同时将Chart对象的创建和使用分离，Sunny软件公司开发人员决定使用简单工厂模式对图表库进行重构，重构后的结构如图2所示：  
-![图2 图表库结构图](../../../../../../../../../../../assets/images/creational/simple_factory/demo-chart.jpg)  
+![图2 图表库结构图](../../../../../../../../../../../assets/images/creational/seq1_simple_factory/demo-chart.jpg)  
 图2 图表库结构图
 
 在图2中，Chart接口充当抽象产品类，其子类HistogramChart、PieChart和LineChart充当具体产品类，ChartFactory充当工厂类。完整代码如下所示：
@@ -303,7 +303,7 @@ class Client {
 5 简单工厂模式的简化  
 
 有时候，为了简化简单工厂模式，我们可以将抽象产品类和工厂类合并，将静态工厂方法移至抽象产品类中，如图3所示：  
-![图3 简化的简单工厂模式](../../../../../../../../../../../assets/images/creational/simple_factory/demo-chart.jpg)  
+![图3 简化的简单工厂模式](../../../../../../../../../../../assets/images/creational/seq1_simple_factory/demo-chart.jpg)  
 图3 简化的简单工厂模式  
 
 在图3中，客户端可以通过产品父类的静态工厂方法，根据参数的不同创建不同类型的产品子类对象，这种做法在JDK等类库和框架中也广泛存在。  
