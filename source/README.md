@@ -5,5 +5,20 @@
 * 结构型模式 Structural Pattern
 * 行为型模式 Behavioral Pattern
 
-源码的结构也按照这三种类型来组成 
+源码的结构也按照这三种类型来组成，即每一个设计模式对应一个包(package)，每一个设计模式的包下边有个四个文件夹：
+* structural 该设计模式结构
+* demo 示例
+* demooptimized 示例优化
+* practice 练习
+
+例如：
+```
+├─creational
+│  ├─seq1
+│  │  └─simplefactory
+│  │      ├─demo
+│  │      ├─demooptimized
+│  │      ├─practice
+│  │      └─structural
+```
 
