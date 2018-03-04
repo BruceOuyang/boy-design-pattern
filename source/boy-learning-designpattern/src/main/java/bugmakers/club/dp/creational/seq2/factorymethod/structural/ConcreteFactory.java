@@ -8,6 +8,6 @@ package bugmakers.club.dp.creational.seq2.factorymethod.structural;
 public class ConcreteFactory implements AbstractFactory {
 
     public AbstractProduct factoryMethod() {
-        return null;
+        return new ConcreteProduct();
     }
 }
