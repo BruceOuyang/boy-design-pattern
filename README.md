@@ -2,7 +2,7 @@
 > Bruce Ouyang 正在读[《设计模式Java版——刘伟》](https://gof.quanke.name/)这本书    
 
 ## 仓库目录介绍
-* [assets](assets) 文档中的一些相关的图片的存放目录
+* [assets/images](assets/images) 文档中的一些相关的图片的存放目录
 * [config-repo](config-repo) 源码中使用到的一些配置文件存放目录
 * [source](source) 源码所在目录
 
