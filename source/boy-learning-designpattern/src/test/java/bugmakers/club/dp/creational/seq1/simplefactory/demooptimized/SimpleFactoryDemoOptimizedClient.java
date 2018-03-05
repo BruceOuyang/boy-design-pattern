@@ -11,13 +11,9 @@ import bugmakers.club.dp.creational.seq1.simplefactory.demo.ChartFactory;
 public class SimpleFactoryDemoOptimizedClient {
 
     public static void main(String args[]) {
-        Chart chart;
-
-        //读取配置文件中的参数
-        String type = SimpleFactoryXMLUtil.getChartType();
 
         //创建产品对象
-        chart = ChartFactory.getChart(type);
+        Chart  chart = ChartFactory.getChart();
         chart.display();
     }
 }

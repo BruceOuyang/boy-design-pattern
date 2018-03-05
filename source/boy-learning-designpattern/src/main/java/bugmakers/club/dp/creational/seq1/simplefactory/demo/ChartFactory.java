@@ -1,5 +1,7 @@
 package bugmakers.club.dp.creational.seq1.simplefactory.demo;
 
+import bugmakers.club.dp.creational.seq1.simplefactory.demooptimized.SimpleFactoryXMLUtil;
+
 /**
  * @Description: 图表工厂类：工厂类
  * @Author: Bruce
@@ -44,5 +46,15 @@ public class ChartFactory {
             System.out.println("不支持的统计图类型");
         }
         return chart;
+    }
+
+    /**
+     * 静态工厂方法
+     * @return
+     */
+    public static Chart getChart() {
+        //读取配置文件中的参数
+        String type = SimpleFactoryXMLUtil.getChartType();
+        return getChart(type);
     }
 }
