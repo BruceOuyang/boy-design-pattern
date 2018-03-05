@@ -9,7 +9,7 @@
 简单工厂模式(Simple Factory Pattern)：定义一个工厂类，它可以根据参数的不同返回不同类的实例，被创建的实例通常都具有共同的父类。因为在简单工厂模式中用于创建实例的方法是静态(static)方法，因此简单工厂模式又被称为静态工厂方法(Static Factory Method)模式，它属于类创建型模式。  
 
 简单工厂模式的要点在于：当你需要什么，只需要传入一个正确的参数，就可以获取你所需要的对象，而无须知道其创建细节。简单工厂模式结构比较简单，其核心是工厂类的设计，其结构如图1所示：  
-![图1 简单工厂模式结构](../../../../../../../../../../../../assets/images/creational/seq1_simple_factory/simple-factory-uml.jpg)  
+![图1 简单工厂模式结构](http://upload-images.jianshu.io/upload_images/5792176-516b3575247b7c31.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图1 简单工厂模式结构图  
 
 在简单工厂模式结构图中包含如下几个角色：  

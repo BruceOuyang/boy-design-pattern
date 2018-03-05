@@ -15,7 +15,7 @@ Sunny公司的开发人员通过对该需求进行分析，发现该日志记录
 (2) 用户可能需要更换日志记录方式，在客户端代码中需要提供一种灵活的方式来选择日志记录器，尽量在不修改源代码的基础上更换或者增加日志记录方式。  
 
 Sunny公司开发人员最初使用简单工厂模式对日志记录器进行了设计，初始结构如图1所示：  
-![图1 基于简单工厂模式设计的日志记录器结构图](../../../../../../../../../../../assets/images/creational/seq2_factory_method/logger-simplefactory-uml.jpg)  
+![图1 基于简单工厂模式设计的日志记录器结构图](http://upload-images.jianshu.io/upload_images/5792176-973171e86d75b33a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图1 基于简单工厂模式设计的日志记录器结构图  
 
 在图1中，LoggerFactory充当创建日志记录器的工厂，提供了工厂方法createLogger()用于创建日志记录器，Logger是抽象日志记录器接口，其子类为具体日志记录器。其中，工厂类LoggerFactory代码片段如下所示：  
@@ -64,7 +64,7 @@ class LoggerFactory {
 工厂方法模式(Factory Method Pattern)：定义一个用于创建对象的接口，让子类决定将哪一个类实例化。工厂方法模式让一个类的实例化延迟到其子类。工厂方法模式又简称为工厂模式(Factory Pattern)，又可称作虚拟构造器模式(Virtual Constructor Pattern)或多态工厂模式(Polymorphic Factory Pattern)。工厂方法模式是一种类创建型模式。  
 
 工厂方法模式提供一个抽象工厂接口来声明抽象工厂方法，而由其子类来具体实现工厂方法，创建具体的产品对象。工厂方法模式结构如图2所示：  
-![图2 工厂方法模式结构图](../../../../../../../../../../../assets/images/creational/seq2_factory_method/factory-method-uml.jpg)  
+![图2 工厂方法模式结构图](http://upload-images.jianshu.io/upload_images/5792176-d63340c7cf3d26cb.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图2 工厂方法模式结构图  
 
 在工厂方法模式结构图中包含如下几个角色：  
@@ -113,7 +113,7 @@ abstractProduct = factory.factoryMethod();
 3 完整解决方案  
 
 Sunny公司开发人员决定使用工厂方法模式来设计日志记录器，其基本结构如图3所示：  
-![图3 日志记录器结构图](../../../../../../../../../../../assets/images/creational/seq2_factory_method/logger-factorymethod-uml.jpg)  
+![图3 日志记录器结构图](http://upload-images.jianshu.io/upload_images/5792176-f08a6b616f9a6ddd.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图3 日志记录器结构图  
 
 在图3中，Logger接口充当抽象产品，其子类FileLogger和DatabaseLogger充当具体产品，LoggerFactory接口充当抽象工厂，其子类FileLoggerFactory和DatabaseLoggerFactory充当具体工厂。完整代码如下所示：  
@@ -281,7 +281,7 @@ class Client {
 5 重载的工厂方法  
 
 Sunny公司开发人员通过进一步分析，发现可以通过多种方式来初始化日志记录器，例如可以为各种日志记录器提供默认实现；还可以为数据库日志记录器提供数据库连接字符串，为文件日志记录器提供文件路径；也可以将参数封装在一个Object类型的对象中，通过Object对象将配置参数传入工厂类。此时，可以提供一组重载的工厂方法，以不同的方式对产品对象进行创建。当然，对于同一个具体工厂而言，无论使用哪个工厂方法，创建的产品类型均要相同。如图4所示：  
-![图4 重载的工厂方法结构图](../../../../../../../../../../../assets/images/creational/seq2_factory_method/logger-factorymethod-override-uml.jpg)  
+![图4 重载的工厂方法结构图](http://upload-images.jianshu.io/upload_images/5792176-b5c1d53c3a05d3b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图4 重载的工厂方法结构图  
 
 引入重载方法后，抽象工厂LoggerFactory的代码修改如下：  
@@ -328,7 +328,7 @@ class DatabaseLoggerFactory implements LoggerFactory {
 有时候，为了进一步简化客户端的使用，还可以对客户端隐藏工厂方法，此时，在工厂类中将直接调用产品类的业务方法，客户端无须调用工厂方法创建产品，直接通过工厂即可使用所创建的对象中的业务方法。
 
 如果对客户端隐藏工厂方法，日志记录器的结构图将修改为图5所示：  
-![图5 隐藏工厂方法后的日志记录器结构图](../../../../../../../../../../../assets/images/creational/seq2_factory_method/logger-factorymethod-hidefactory2client-uml.jpg)  
+![图5 隐藏工厂方法后的日志记录器结构图](http://upload-images.jianshu.io/upload_images/5792176-e663028d19376b7b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) 
 图5 隐藏工厂方法后的日志记录器结构图
 
 在图5中，抽象工厂类LoggerFactory的代码修改如下：  
