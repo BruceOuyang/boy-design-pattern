@@ -4,7 +4,7 @@
 
 ## 初衷
 1. 系统的学习一遍设计模式
-2. https://gof.quanke.name这个地址貌似正常情况下访问不了，习惯了markdown不想去看csdn上旧风格的文章（[刘伟大神的csdn博客](http://blog.csdn.net/lovelion)上也有一份设计模式）,故在此仓库copy一份
+2. https://gof.quanke.name这个地址貌似正常情况下访问不了，习惯了markdown不想去看csdn上旧风格的文章（[刘伟大神的csdn博客](http://blog.csdn.net/lovelion)上也有一份设计模式）,故在此仓库copy一份，方便大家访问和一起学习
 3. 融入一点自己的风格：我将刘伟大神的设计模式一书内容分散在代码的各个包里边，方便阅读
 4. 原文中有一些练习，就在这个仓库的源码中做掉
 
