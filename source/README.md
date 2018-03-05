@@ -11,8 +11,6 @@
 * demooptimized 示例优化
 * practice 练习
 
-在test这个TEST SOURCE ROOT目录下也有对应的4个文件夹，里边放置的是对应的应用测试代码
-
 例如：
 ```
 ├─creational
@@ -24,3 +22,4 @@
 │  │      └─structural
 ```
 
+在test目录下也有对应的4个文件夹，里边放置的是对应的应用测试代码
