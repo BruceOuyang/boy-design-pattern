@@ -11,3 +11,7 @@
 ## 二十四种设计模式一览
 ![24种设计模式](http://upload-images.jianshu.io/upload_images/5792176-8708f103d9e62d2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+## 题外话
+推荐大家一个网站 https://gitbook.com 上面有各种书籍，刘伟大神的这本设计模式就是在gitbook上找到的。
+
+gitbook的检索页面 https://gitbook.com/explore
