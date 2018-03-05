@@ -1,6 +1,11 @@
 # boy-reading-design-pattern-java
-> Bruce Ouyang 正在读[《设计模式Java版——刘伟大神》](https://gof.quanke.name/)这本书  
-> 对应源码记录在[source](source)目录下
+> Bruce Ouyang 正在读[《设计模式Java版——刘伟》](https://gof.quanke.name/)这本书    
+
+## 仓库目录介绍
+* [assets](assets) 文档中的一些相关的图片的存放目录
+* [config-repo](config-repo) 源码中使用到的一些配置文件存放目录
+* [source](source) 源码所在目录
+
 
 ## 初衷
 1. 系统的学习一遍设计模式  
