@@ -28,7 +28,7 @@ public class FactoryMethodXMLUtil {
             Document document = documentBuilder.parse(new File(FACTORY_METHOD_CONFIG));
 
             // 获取包含日志记录器类名的节点
-            NodeList nodeList = document.getElementsByTagName("logger");
+            NodeList nodeList = document.getElementsByTagName("className");
             Node node = nodeList.item(0).getFirstChild();
             String loggerClassName = node.getNodeValue();
 
