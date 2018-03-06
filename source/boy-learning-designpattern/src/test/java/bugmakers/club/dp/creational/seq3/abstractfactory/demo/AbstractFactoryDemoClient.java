@@ -1,4 +1,4 @@
-package bugmakers.club.dp.creational.seq3.abstractfactory;
+package bugmakers.club.dp.creational.seq3.abstractfactory.demo;
 
 import bugmakers.club.dp.creational.seq3.abstractfactory.demo.factory.SkinFactory;
 import bugmakers.club.dp.creational.seq3.abstractfactory.demo.factory.SpringSkinFactory;
