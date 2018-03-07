@@ -1,0 +1,106 @@
+7.2 原型模式概述
+
+在使用原型模式时，我们需要首先创建一个原型对象，再通过复制这个原型对象来创建更多同类型的对象。试想，如果连孙悟空的模样都不知道，怎么拔毛变小猴子呢？原型模式的定义如下：原型模式(Prototype Pattern)：使用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。原型模式是一种对象创建型模式。
+ 
+原型模式的工作原理很简单：将一个原型对象传给那个要发动创建的对象，这个要发动创建的对象通过请求原型对象拷贝自己来实现创建过程。由于在软件系统中我们经常会遇到需要创建多个相同或者相似对象的情况，因此原型模式在真实开发中的使用频率还是非常高的。原型模式是一种“另类”的创建型模式，创建克隆对象的工厂就是原型类自身，工厂方法由克隆方法来实现。
+
+需要注意的是通过克隆方法所创建的对象是全新的对象，它们在内存中拥有新的地址，通常对克隆所产生的对象进行修改对原型对象不会造成任何影响，每一个克隆对象都是相互独立的。通过不同的方式修改可以得到一系列相似但不完全相同的对象。原型模式的结构如图7-2所示：  
+![图7-2 原型模式结构图](http://upload-images.jianshu.io/upload_images/5792176-b0a8409a40cbdde4.gif?imageMogr2/auto-orient/strip)  
+图7-2 原型模式结构图
+
+在原型模式结构图中包含如下几个角色：  
+* Prototype（抽象原型类）：它是声明克隆方法的接口，是所有具体原型类的公共父类，可以是抽象类也可以是接口，甚至还可以是具体实现类。 
+ 
+* ConcretePrototype（具体原型类）：它实现在抽象原型类中声明的克隆方法，在克隆方法中返回自己的一个克隆对象。  
+
+* Client（客户类）：让一个原型对象克隆自身从而创建一个新的对象，在客户类中只需要直接实例化或通过工厂方法等方式创建一个原型对象，再通过调用该对象的克隆方法即可得到多个相同的对象。由于客户类针对抽象原型类Prototype编程，因此用户可以根据需要选择具体原型类，系统具有较好的可扩展性，增加或更换具体原型类都很方便。 
+  
+原型模式的核心在于如何实现克隆方法，下面将介绍两种在Java语言中常用的克隆实现方法：
+
+1. 通用实现方法
+
+通用的克隆实现方法是在具体原型类的克隆方法中实例化一个与自身类型相同的对象并将其返回，并将相关的参数传入新创建的对象中，保证它们的成员属性相同。示意代码如下所示：  
+```java
+class ConcretePrototype implements Prototype
+{
+    private String  attr; //成员属性
+    public void  setAttr(String attr)
+    {
+        this.attr = attr;
+    }
+    public String  getAttr()
+    {
+        return this.attr;
+    }
+    public Prototype clone() //克隆方法
+    {
+        Prototype  prototype = new ConcretePrototype(); //创建新对象
+        prototype.setAttr(this.attr);
+        return prototype;
+    }
+}
+```
+
+**思考**
+
+能否将上述代码中的clone()方法写成：public Prototype clone() { return this; }？给出你的理由。
+
+> 不能，因为原型模式的定义是克隆一个新的对象，而不是对象本身。
+
+在客户类中我们只需要创建一个ConcretePrototype对象作为原型对象，然后调用其clone()方法即可得到对应的克隆对象，如下代码所示：  
+```java
+Prototype obj1  = new ConcretePrototype();
+obj1.setAttr("Sunny");
+Prototype obj2  = obj1.clone();
+```
+
+这种方法可作为原型模式的通用实现，它与编程语言特性无关，任何面向对象语言都可以使用这种形式来实现对原型的克隆。
+
+2. Java语言提供的clone()方法
+
+学过Java语言的人都知道，所有的Java类都继承自java.lang.Object。事实上，Object类提供一个clone()方法，可以将一个Java对象复制一份。因此在Java中可以直接使用Object提供的clone()方法来实现对象的克隆，Java语言中的原型模式实现很简单。
+
+需要注意的是能够实现克隆的Java类必须实现一个标识接口Cloneable，表示这个Java类支持被复制。如果一个类没有实现这个接口但是调用了clone()方法，Java编译器将抛出一个CloneNotSupportedException异常。如下代码所示：  
+```java
+class ConcretePrototype implements Cloneable
+{
+    //……
+    @Override
+    public Prototype clone()
+    {
+        Object object = null;
+        try {
+            object = super.clone();
+        } catch (CloneNotSupportedException exception) {
+            System.err.println("Not support cloneable");
+        }
+        return (Prototype )object;
+    }
+    //……
+}
+```  
+
+在客户端创建原型对象和克隆对象也很简单，如下代码所示：  
+```java
+Prototype obj1  = new ConcretePrototype();
+Prototype obj2  = obj1.clone();
+```  
+
+一般而言，Java语言中的clone()方法满足：  
+
+1. 对任何对象x，都有x.clone() != x，即克隆对象与原型对象不是同一个对象；  
+  
+2. 对任何对象x，都有x.clone().getClass() == x.getClass()，即克隆对象与原型对象的类型一样；  
+
+3. 如果对象x的equals()方法定义恰当，那么x.clone().equals(x)应该成立。  
+
+为了获取对象的一份拷贝，我们可以直接利用Object类的clone()方法，具体步骤如下：  
+
+1. 在派生类中覆盖基类的clone()方法，并声明为public；  
+
+2. 在派生类的clone()方法中，调用super.clone()；  
+
+3. 派生类需实现Cloneable接口。  
+
+此时，Object类相当于抽象原型类，所有实现了Cloneable接口的类相当于具体原型类。  
+
