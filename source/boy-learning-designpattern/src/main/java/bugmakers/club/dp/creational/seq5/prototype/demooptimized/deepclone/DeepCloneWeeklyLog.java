@@ -54,8 +54,8 @@ public class DeepCloneWeeklyLog implements Serializable {
      */
     public DeepCloneWeeklyLog deepClone() throws  IOException, ClassNotFoundException{
         //将对象写入流中
-        ByteArrayOutputStream bao=new  ByteArrayOutputStream();
-        ObjectOutputStream oos=new  ObjectOutputStream(bao);
+        ByteArrayOutputStream bao = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bao);
         oos.writeObject(this);
 
         //将对象从流中取出

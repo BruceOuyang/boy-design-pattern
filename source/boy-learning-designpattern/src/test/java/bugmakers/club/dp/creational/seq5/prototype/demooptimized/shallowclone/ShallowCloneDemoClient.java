@@ -1,6 +1,6 @@
-package bugmakers.club.dp.creational.seq5.prototype.demo;
+package bugmakers.club.dp.creational.seq5.prototype.demooptimized.shallowclone;
 
-import bugmakers.club.dp.creational.seq5.prototype.demooptimized.shallowclone.ShallowCloneWeeklyLog;
+import bugmakers.club.dp.creational.seq5.prototype.demo.Attachment;
 
 /**
  * @Description:
@@ -19,7 +19,7 @@ public class ShallowCloneDemoClient {
         log_previous  = new ShallowCloneWeeklyLog();
 
         //创建附件对象
-        Attachment  attachment = new Attachment();
+        Attachment attachment = new Attachment();
 
         //将附件添加到周报中
         log_previous.setAttachment(attachment);
