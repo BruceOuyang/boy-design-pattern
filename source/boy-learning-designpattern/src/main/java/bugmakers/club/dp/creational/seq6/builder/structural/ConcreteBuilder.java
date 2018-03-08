@@ -1,7 +1,7 @@
 package bugmakers.club.dp.creational.seq6.builder.structural;
 
 /**
- * @Description:
+ * @Description: 具体构建器
  * @Author: Bruce
  * @Datetime: 2018/3/8 16:54
  */
