@@ -1,7 +1,5 @@
 package bugmakers.club.dp.creational.seq5.prototype.demooptimized.deepclone;
 
-import bugmakers.club.dp.creational.seq5.prototype.demo.WeeklyLog;
-
 import java.io.*;
 
 /**
@@ -49,7 +47,7 @@ public class DeepCloneWeeklyLog implements Serializable {
     }
 
     /**
-     * 使用clone()方法实现浅克隆
+     * 使用序列化技术实现深克隆
      * @return
      */
     public DeepCloneWeeklyLog deepClone() throws  IOException, ClassNotFoundException{
