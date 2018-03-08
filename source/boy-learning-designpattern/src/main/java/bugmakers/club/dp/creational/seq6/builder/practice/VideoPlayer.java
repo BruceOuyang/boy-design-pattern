@@ -1,11 +1,11 @@
 package bugmakers.club.dp.creational.seq6.builder.practice;
 
 /**
- * @Description: 抽象产品
+ * @Description: 复杂产品对象
  * @Author: Bruce
  * @Datetime: 2018/3/8 18:03
  */
-public abstract class VideoPlayer {
+public class VideoPlayer {
 
     private String menu;
     private String plist;
@@ -44,5 +44,4 @@ public abstract class VideoPlayer {
         this.main = main;
     }
 
-    public abstract void mode();
 }
