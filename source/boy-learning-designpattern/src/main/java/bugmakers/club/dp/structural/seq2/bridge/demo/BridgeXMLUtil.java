@@ -1,4 +1,4 @@
-package bugmakers.club.dp.structural.seq2.bridge.demooptimized;
+package bugmakers.club.dp.structural.seq2.bridge.demo;
 
 
 import javax.xml.parsers.*;

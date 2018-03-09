@@ -1,7 +1,5 @@
 package bugmakers.club.dp.structural.seq2.bridge.demo;
 
-import bugmakers.club.dp.structural.seq2.bridge.demooptimized.BridgeXMLUtil;
-
 /**
  * @Description:
  * @Author: Bruce
