@@ -1,1 +1,7 @@
-# 桥接模式 Bridge Pattern
+<?xml version="1.0"?>
+<config>
+    <!--RefinedAbstraction-->
+    <className>JPGImage</className>
+    <!--ConcreteImplementor-->
+    <className>WindowsImp</className>
+</config>
