@@ -48,14 +48,14 @@ Sunny软件公司开发人员面对这个没有源码的算法库，遇到一个
 根据对象适配器模式结构图，在对象适配器中，客户端需要调用request()方法，而适配者类Adaptee没有该方法，但是它所提供的specificRequest()方法却是客户端所需要的。为了使客户端能够使用适配者类，需要提供一个包装类Adapter，即适配器类。这个包装类包装了一个适配者的实例，从而将客户端与适配者衔接起来，在适配器的request()方法中调用适配者的specificRequest()方法。因为适配器类与适配者类是关联关系（也可称之为委派关系），所以这种适配器模式称为对象适配器模式。典型的对象适配器代码如下所示：  
 ```java
 class Adapter extends Target {  
-    private Adaptee adaptee; //维持一个对适配者对象的引用  
+    private Adaptee objAdaptee; //维持一个对适配者对象的引用  
 
-    public Adapter(Adaptee adaptee) {  
-        this.adaptee=adaptee;  
+    public Adapter(Adaptee objAdaptee) {  
+        this.objAdaptee=objAdaptee;  
     }  
 
     public void request() {  
-        adaptee.specificRequest(); //转发调用  
+        objAdaptee.specificRequest(); //转发调用  
     }  
 }
 ```  
@@ -286,18 +286,18 @@ class Adapter extends Adaptee implements Target {
 class Adapter implements Target,Adaptee {  
     //同时维持对抽象目标类和适配者的引用  
     private Target target;  
-    private Adaptee adaptee;  
+    private Adaptee objAdaptee;  
 
     public Adapter(Target target) {  
         this.target = target;  
     }  
 
-    public Adapter(Adaptee adaptee) {  
-        this.adaptee = adaptee;  
+    public Adapter(Adaptee objAdaptee) {  
+        this.objAdaptee = objAdaptee;  
     }  
 
     public void request() {  
-        adaptee.specificRequest();  
+        objAdaptee.specificRequest();  
     }  
 
     public void specificRequest() {  
