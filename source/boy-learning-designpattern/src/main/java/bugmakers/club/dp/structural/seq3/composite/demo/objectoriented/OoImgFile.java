@@ -1,4 +1,4 @@
-package bugmakers.club.dp.structural.seq3.composite.structural.objectoriented;
+package bugmakers.club.dp.structural.seq3.composite.demo.objectoriented;
 
 /**
  * @Description: 为了突出核心框架代码，我们对杀毒过程的实现进行了大量简化

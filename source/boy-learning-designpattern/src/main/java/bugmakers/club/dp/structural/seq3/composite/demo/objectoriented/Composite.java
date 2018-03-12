@@ -1,4 +1,4 @@
-package bugmakers.club.dp.structural.seq3.composite.structural.objectoriented;
+package bugmakers.club.dp.structural.seq3.composite.demo.objectoriented;
 
 import bugmakers.club.dp.structural.seq3.composite.structural.Component;
 
