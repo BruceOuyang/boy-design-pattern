@@ -555,7 +555,7 @@ class Client {
 11.6 组合模式总结  
 
 组合模式使用面向对象的思想来实现树形结构的构建与处理，描述了如何将容器对象和叶子对象进行递归组合，实现简单，灵活性好。由于在软件开发中存在大量的树形结构，因此组合模式是一种使用频率较高的结构型设计模式，Java SE中的AWT和Swing包的设计就基于组合模式，在这些界面包中为用户提供了大量的容器构件（如Container）和成员构件（如Checkbox、Button和TextComponent等），其结构如图11-10所示：  
-![图11-10 AWT组合模式结构示意图![java-awt-swing-composite.jpg](https://upload-images.jianshu.io/upload_images/5792176-460cf4070fbec3b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
+![图11-10 AWT组合模式结构示意图](https://upload-images.jianshu.io/upload_images/5792176-460cf4070fbec3b5.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)  
 图11-10 AWT组合模式结构示意图  
 
 在图11-10中，Component类是抽象构件，Checkbox、Button和TextComponent是叶子构件，而Container是容器构件，在AWT中包含的叶子构件还有很多，因为篇幅限制没有在图中一一列出。在一个容器构件中可以包含叶子构件，也可以继续包含容器构件，这些叶子构件和容器构件一起组成了复杂的GUI界面。  
