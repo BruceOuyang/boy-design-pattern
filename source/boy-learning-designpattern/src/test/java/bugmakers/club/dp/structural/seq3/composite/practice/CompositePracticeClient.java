@@ -12,7 +12,7 @@ public class CompositePracticeClient {
      */
     public static void main(String[] args) {
 
-        UIComponent panel, text, button = null;
+        AbstractUIComponent panel, text, button = null;
 
         panel = new Panel();
         text = new Text();

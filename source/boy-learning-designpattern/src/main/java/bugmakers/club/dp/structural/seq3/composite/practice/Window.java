@@ -7,25 +7,29 @@ import java.util.ArrayList;
  * @Author: Bruce
  * @Datetime: 2018/3/13 13:30
  */
-public class Window extends UIComponent {
+public class Window extends AbstractUIComponent {
 
-    private ArrayList<UIComponent> list = new ArrayList<UIComponent>();
+    public Window(String title) {
+        this.title = title;
+    }
 
-    public Window add(UIComponent component) {
+    private ArrayList<AbstractUIComponent> list = new ArrayList<AbstractUIComponent>();
+
+    public Window add(AbstractUIComponent component) {
         list.add(component);
         return this;
     }
-    public void remove(UIComponent component) {
+    public void remove(AbstractUIComponent component) {
         list.remove(component);
     }
-    public UIComponent get(int i) {
+    public AbstractUIComponent get(int i) {
         return list.get(i);
     }
 
     @Override
     public void show() {
-        System.out.println("展示窗口");
-        for(UIComponent component : list) {
+        System.out.println("展示" + title + "窗口");
+        for(AbstractUIComponent component : list) {
             component.show();
         }
     }
