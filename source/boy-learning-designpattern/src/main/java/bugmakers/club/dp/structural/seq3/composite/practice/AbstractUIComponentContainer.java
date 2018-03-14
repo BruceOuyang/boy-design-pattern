@@ -7,22 +7,22 @@ import java.util.ArrayList;
  * @Author: Bruce
  * @Datetime: 2018/3/13 14:02
  */
-public abstract class AbstractAbstractUIComponentContainer extends AbstractUIComponent {
+public abstract class AbstractUIComponentContainer extends AbstractUIComponent {
 
-    private ArrayList<AbstractUIComponent> list = new ArrayList<AbstractUIComponent>();
-
-    public AbstractAbstractUIComponentContainer(String title){
-        this.title = title;
-    }
+    protected ArrayList<AbstractUIComponent> list = new ArrayList<AbstractUIComponent>();
 
     /**
      * 初始化容器
      */
+    @Override
     public abstract void init();
 
     @Override
     public void show() {
-        System.out.println("展示title为" + title + "的容器控件");
+        System.out.println("展示容器控件：" + title);
+        for(AbstractUIComponent component : list) {
+            component.show();
+        }
     }
 
     /**

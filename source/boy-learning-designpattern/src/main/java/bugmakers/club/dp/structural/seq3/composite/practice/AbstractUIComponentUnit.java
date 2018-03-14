@@ -5,15 +5,13 @@ package bugmakers.club.dp.structural.seq3.composite.practice;
  * @Author: Bruce
  * @Datetime: 2018/3/13 14:01
  */
-public class AbstractAbstractUIComponentUnit extends AbstractUIComponent {
+public abstract class AbstractUIComponentUnit extends AbstractUIComponent {
 
     @Override
-    public void init() {
-
-    }
+    public abstract void init();
 
     @Override
     public void show() {
-
+        System.out.println("显示单元控件：" + title);
     }
 }

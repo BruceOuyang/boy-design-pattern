@@ -12,12 +12,23 @@ public class CompositePracticeClient {
      */
     public static void main(String[] args) {
 
-        AbstractUIComponent panel, text, button = null;
+        AbstractUIComponent unameTxt, pwdTxt, loginBtn = null;
 
-        panel = new Panel();
-        text = new Text();
-        button = new Button();
+        AbstractUIComponentContainer loginWindow, loginPanel = null;
 
-        new Window().add(panel).add(text).add(button).show();
+        loginWindow = new Window("Login Window");
+        loginPanel = new Panel("Login Panel");
+
+        unameTxt = new Text("Username");
+        pwdTxt = new Text("Password");
+        loginBtn = new Button("Submit");
+
+        loginPanel.add(unameTxt);
+        loginPanel.add(pwdTxt);
+        loginPanel.add(loginBtn);
+
+        loginWindow.add(loginPanel);
+
+        loginWindow.show();
     }
 }
