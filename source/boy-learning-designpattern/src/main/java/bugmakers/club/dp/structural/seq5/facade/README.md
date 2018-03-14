@@ -85,9 +85,9 @@ class Facade
 
 由于在外观类中维持了对子系统对象的引用，客户端可以通过外观类来间接调用子系统对象的业务方法，而无须与子系统对象直接交互。引入外观类后，客户端代码变得非常简单，典型代码如下：  
 ```java
-class Program  
+public class Client  
 {  
-    static void Main(string[] args)  
+    public static void Main(string[] args)  
     {  
         Facade facade = new Facade();  
         facade.Method();  
@@ -262,7 +262,7 @@ class NewCipherMachine
 {  
     public string Encrypt(string plainText)   
     {  
-        Console.Write("数据加密，将明文转换为密文：");  
+        System.out.println("数据加密，将明文转换为密文：");  
         string es = "";  
         int key = 10;//设置密钥，移位数为10  
         char[] chars = plainText.ToCharArray();  
