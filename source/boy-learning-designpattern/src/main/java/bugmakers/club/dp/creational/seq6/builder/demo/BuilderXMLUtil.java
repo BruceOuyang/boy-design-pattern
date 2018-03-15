@@ -11,6 +11,8 @@ import java.io.*;
  */
 public class BuilderXMLUtil {
 
+    private static final String BUILDER_CONFIG = "config-repo/creational/seq6/builder/builder-pattern.xml";
+
     /**
      * 该方法用于从XML配置文件中提取具体类类名，并返回一个实例对象
      * @return
@@ -22,10 +24,10 @@ public class BuilderXMLUtil {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc  = builder.parse(new File("builder-pattern.xml"));
+            doc  = builder.parse(new File(BUILDER_CONFIG));
 
             //获取包含类名的文本节点
-            NodeList nl = doc.getElementsByTagName("className");
+            NodeList nl = doc.getElementsByTagName("builder");
             Node classNode=nl.item(0).getFirstChild();
             String cName=classNode.getNodeValue();
 

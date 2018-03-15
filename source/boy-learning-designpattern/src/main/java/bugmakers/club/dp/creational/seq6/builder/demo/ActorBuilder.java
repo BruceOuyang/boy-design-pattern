@@ -5,7 +5,7 @@ package bugmakers.club.dp.creational.seq6.builder.demo;
  * @Author: Bruce
  * @Datetime: 2018/3/8 17:05
  */
-abstract class ActorBuilder {
+public abstract class ActorBuilder {
 
     protected  Actor actor = new Actor();
 

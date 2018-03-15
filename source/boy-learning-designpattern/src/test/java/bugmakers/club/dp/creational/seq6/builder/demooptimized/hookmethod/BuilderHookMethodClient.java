@@ -1,6 +1,7 @@
 package bugmakers.club.dp.creational.seq6.builder.demooptimized.hookmethod;
 
 import bugmakers.club.dp.creational.seq6.builder.demo.Actor;
+import bugmakers.club.dp.creational.seq6.builder.demo.BuilderXMLUtil;
 
 /**
  * @Description:
@@ -18,9 +19,7 @@ public class BuilderHookMethodClient {
         HookMethodActorBuilder ab;
 
         //反射生成具体建造者对象
-        //ab =  (ActorBuilder)BuilderXMLUtil.getBean();
-
-        ab = new HookMethodDevilBuilder();
+        ab =  (HookMethodActorBuilder) BuilderXMLUtil.getBean();
 
         HookMethodActorController ac = new HookMethodActorController();
 

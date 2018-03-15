@@ -38,8 +38,7 @@ public class FactoryMethodXMLUtil {
             return logger;
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
-            return null;
         }
+        return null;
     }
 }

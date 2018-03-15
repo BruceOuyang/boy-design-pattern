@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-    <className>SpringSkinFactory</className>
+    <className>bugmakers.club.dp.creational.seq3.abstractfactory.demo.factory.SpringSkinFactory</className>
 </config>

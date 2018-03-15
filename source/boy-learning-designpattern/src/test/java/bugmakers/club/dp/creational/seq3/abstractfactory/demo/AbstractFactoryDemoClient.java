@@ -25,9 +25,7 @@ public class AbstractFactoryDemoClient {
         TextField tf;
         ComboBox cb;
 
-//        factory = (SkinFactory) AbstractFactoryXMLUtil.getBean();
-
-        factory = new SpringSkinFactory();
+        factory = (SkinFactory) AbstractFactoryXMLUtil.getBean();
 
         bt = factory.createButton();
         tf = factory.createTextField();

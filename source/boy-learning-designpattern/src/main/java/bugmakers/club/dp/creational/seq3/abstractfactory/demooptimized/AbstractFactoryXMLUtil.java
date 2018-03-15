@@ -11,6 +11,8 @@ import java.io.*;
  */
 public class AbstractFactoryXMLUtil {
 
+    private static final String ABSTRACT_FACTORY_CONFIG = "config-repo/creational/seq3/abstractfactory/abstract-factory-pattern.xml";
+
     /**
      * 该方法用于从XML配置文件中提取具体类类名，并返回一个实例对象
       * @return
@@ -21,7 +23,7 @@ public class AbstractFactoryXMLUtil {
             DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = dFactory.newDocumentBuilder();
             Document doc;
-            doc = builder.parse(new File("config.xml"));
+            doc = builder.parse(new File(ABSTRACT_FACTORY_CONFIG));
 
             //获取包含类名的文本节点
             NodeList nl = doc.getElementsByTagName("className");

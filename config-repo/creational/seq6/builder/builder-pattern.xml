@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-    <className>AngelBuilder</className>
+    <builder>bugmakers.club.dp.creational.seq6.builder.demooptimized.hookmethod.HookMethodDevilBuilder</builder>
 </config>
