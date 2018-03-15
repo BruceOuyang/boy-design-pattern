@@ -68,7 +68,7 @@ class NewEncryptFacade extends AbstractEncryptFacade
         writer = new FileWriter();  
     }  
 
-    public override void FileEncrypt(string fileNameSrc, string fileNameDes)  
+    public void FileEncrypt(string fileNameSrc, string fileNameDes)  
     {  
         string plainStr = reader.Read(fileNameSrc);  
         string encryptStr = cipher.Encrypt(plainStr);  

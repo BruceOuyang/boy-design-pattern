@@ -6,5 +6,5 @@ package bugmakers.club.dp.structural.seq5.facade.demooptimized;
  * @Datetime: 2018/3/14 18:18
  */
 public abstract class AbstractEncryptFacade {
-    public abstract void FileEncrypt(String fileNameSrc, String fileNameDes);
+    public abstract void fileEncrypt(String fileNameSrc, String fileNameDes);
 }

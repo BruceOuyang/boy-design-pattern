@@ -1,4 +1,6 @@
-<?xml version="1.0"?>
-<config>
-    
-</config>
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <appSettings>
+        <add key="facade" value="bugmakers.club.dp.structural.seq5.facade.demooptimized.NewEncryptFacade"/>
+    </appSettings>
+</configuration>
