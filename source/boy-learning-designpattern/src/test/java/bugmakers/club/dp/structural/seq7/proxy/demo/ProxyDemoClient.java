@@ -1,7 +1,5 @@
 package bugmakers.club.dp.structural.seq7.proxy.demo;
 
-import java.text.MessageFormat;
-
 /**
  * @Description:
  * @Author: Bruce
