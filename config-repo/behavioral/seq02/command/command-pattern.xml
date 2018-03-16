@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
 <config>
-    
+    <className>bugmakers.club.dp.behavioral.seq02.command.demo.HelpCommand</className>
+    <className>bugmakers.club.dp.behavioral.seq02.command.demo.MinimizeCommand</className>
 </config>
