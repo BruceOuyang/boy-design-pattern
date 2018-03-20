@@ -14,11 +14,16 @@ public class CommandDemooptimizedReqLogClient {
      */
     public static void main(String[] args) {
 
-        ConfigSettingWindow csw = new ConfigSettingWindow(); //定义请求发送者
-        AbstractLogCommand command; //定义命令对象
-        ConfigOperator co = new ConfigOperator(); //定义请求接收者
+        // 定义请求发送者
+        ConfigSettingWindow csw = new ConfigSettingWindow();
 
-        //四次对配置文件的更改
+        // 定义命令对象
+        AbstractLogCommand command;
+
+        // 定义请求接收者
+        ConfigOperator co = new ConfigOperator();
+
+        // 四次对配置文件的更改
         command = new InsertCommand("增加");
         command.setConfigOperator(co);
         csw.setCommand(command);
