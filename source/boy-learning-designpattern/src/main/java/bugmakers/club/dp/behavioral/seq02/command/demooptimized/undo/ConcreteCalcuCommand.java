@@ -9,12 +9,6 @@ import java.util.ArrayList;
  */
 public class ConcreteCalcuCommand extends AbstractCalcuCommand {
 
-    /**
-     * 历史计算状态
-     */
-    private ArrayList<Integer> undoHistoryStat = new ArrayList<Integer>();
-    private ArrayList<Integer> redoHistoryStat = new ArrayList<Integer>();
-
     private Adder adder = new Adder();
     private int value;
 
@@ -25,9 +19,6 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
      */
     @Override
     public int execute(int value) {
-
-        this.undoHistoryStat.add(value);
-
         this.value = value;
         return adder.add(value);
     }
@@ -37,28 +28,7 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
      */
     @Override
     public int undo() {
-
-        int result;
-
-        int index = this.undoHistoryStat.indexOf(value);
-        if(index != 0){
-
-            // 计算结果
-            result = adder.add(-value);
-
-            // 设置value
-            value = this.undoHistoryStat.get(index - 1);
-
-            // 移除undo历史状态
-            this.undoHistoryStat.remove(index);
-
-            // 添加redo历史状态
-            this.redoHistoryStat.add(value);
-        }else{
-
-            result = value;
-        }
-
+        int result = adder.add(-value);
         return result;
     }
 
@@ -69,30 +39,7 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     @Override
     public int redo() {
 
-        int result;
-
-        int index = this.redoHistoryStat.indexOf(value);
-
-        if(index != 0){
-
-            // 执行运算
-            result = adder.add(value);
-
-            // 设置value
-            value = this.redoHistoryStat.get(index - 1);
-
-            // 移除redo历史状态
-            this.redoHistoryStat.remove(index);
-
-            // 添加undo历史状态
-            this.undoHistoryStat.add(value);
-        }
-        else{
-
-            result = value;
-        }
-
-        // 返回结果
+        int result = 0;
         return result;
     }
 }
