@@ -24,14 +24,14 @@ public class LoopCommandNode extends Node {
      * @param context
      */
     @Override
-    public void interpert(Context context) {
+    public void interpret(Context context) {
         context.skipToken(LOOP);
         number = context.currentNumber();
         context.nextToken();
 
         // 循环语句中的表达式
         commandNode = new ExpressionNode();
-        commandNode.interpert(context);
+        commandNode.interpret(context);
     }
 
     @Override

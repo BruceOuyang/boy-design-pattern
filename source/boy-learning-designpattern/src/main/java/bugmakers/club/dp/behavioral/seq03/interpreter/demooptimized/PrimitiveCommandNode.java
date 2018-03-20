@@ -30,7 +30,7 @@ public class PrimitiveCommandNode extends Node {
      * @param context
      */
     @Override
-    public void interpert(Context context) {
+    public void interpret(Context context) {
 
         name = context.currentToken();
         context.skipToken(name);

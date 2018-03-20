@@ -22,7 +22,7 @@ public class ExpressionNode extends Node {
      * @param context
      */
     @Override
-    public void interpert(Context context) {
+    public void interpret(Context context) {
 
         // 循环处理Context中的标记
         while(true){

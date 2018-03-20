@@ -10,7 +10,7 @@ public abstract class Node {
     /**
      * 声明一个方法用于解释语句
      */
-    public abstract void interpert(Context context);
+    public abstract void interpret(Context context);
 
     /**
      * 声明一个方法用于执行标记对应的命令
