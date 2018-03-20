@@ -20,15 +20,24 @@ public class CommandDemooptimizedUndoClient {
         AbstractCalcuCommand command = new ConcreteCalcuCommand();
         form.setCommand(command);
 
+        System.out.println("compute-----------------------");
         form.compute(1);
         form.compute(2);
         form.compute(3);
+        form.compute(4);
+        form.compute(5);
+        form.compute(6);
 
+        System.out.println("undo-----------------------");
+        form.undo();
+        form.undo();
         form.undo();
         form.undo();
         form.undo();
 
-        // todo redo un-finish
+        System.out.println("redo-----------------------");
+        form.redo();
+        form.redo();
         form.redo();
         form.redo();
         form.redo();

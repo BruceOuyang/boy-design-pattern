@@ -12,7 +12,8 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     /**
      * 历史计算状态
      */
-    private ArrayList<Integer> historyStat = new ArrayList<Integer>();
+    private ArrayList<Integer> undoHistoryStat = new ArrayList<Integer>();
+    private ArrayList<Integer> redoHistoryStat = new ArrayList<Integer>();
 
     private Adder adder = new Adder();
     private int value;
@@ -25,7 +26,7 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     @Override
     public int execute(int value) {
 
-        this.historyStat.add(value);
+        this.undoHistoryStat.add(value);
 
         this.value = value;
         return adder.add(value);
@@ -39,15 +40,20 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
 
         int result;
 
-        int index = this.historyStat.indexOf(value);
+        int index = this.undoHistoryStat.indexOf(value);
         if(index != 0){
 
             // 计算结果
             result = adder.add(-value);
 
-            // 移除历史状态
-            value = this.historyStat.get(index - 1);
-            this.historyStat.remove(value);
+            // 设置value
+            value = this.undoHistoryStat.get(index - 1);
+
+            // 移除undo历史状态
+            this.undoHistoryStat.remove(index);
+
+            // 添加redo历史状态
+            this.redoHistoryStat.add(value);
         }else{
 
             result = value;
@@ -63,11 +69,28 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     @Override
     public int redo() {
 
-        // 执行运算
-        int result = adder.add(value);
+        int result;
 
-        // 记录历史状态
-        this.historyStat.add(value);
+        int index = this.redoHistoryStat.indexOf(value);
+
+        if(index != 0){
+
+            // 执行运算
+            result = adder.add(value);
+
+            // 设置value
+            value = this.redoHistoryStat.get(index - 1);
+
+            // 移除redo历史状态
+            this.redoHistoryStat.remove(index);
+
+            // 添加undo历史状态
+            this.undoHistoryStat.add(value);
+        }
+        else{
+
+            result = value;
+        }
 
         // 返回结果
         return result;
