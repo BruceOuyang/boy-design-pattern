@@ -28,6 +28,7 @@ public class CommandDemooptimizedUndoClient {
         form.undo();
         form.undo();
 
+        // todo redo un-finish
         form.redo();
         form.redo();
         form.redo();

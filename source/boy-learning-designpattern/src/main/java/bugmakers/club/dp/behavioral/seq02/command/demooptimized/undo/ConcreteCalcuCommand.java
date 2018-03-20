@@ -37,7 +37,7 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     @Override
     public int undo() {
 
-        int result = 0;
+        int result;
 
         int index = this.historyStat.indexOf(value);
         if(index != 0){
@@ -63,8 +63,13 @@ public class ConcreteCalcuCommand extends AbstractCalcuCommand {
     @Override
     public int redo() {
 
+        // 执行运算
+        int result = adder.add(value);
+
+        // 记录历史状态
         this.historyStat.add(value);
 
-        return adder.add(value);
+        // 返回结果
+        return result;
     }
 }
