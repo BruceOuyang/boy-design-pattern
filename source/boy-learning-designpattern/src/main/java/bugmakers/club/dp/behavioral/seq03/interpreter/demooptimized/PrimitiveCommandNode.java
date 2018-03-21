@@ -5,7 +5,7 @@ package bugmakers.club.dp.behavioral.seq03.interpreter.demooptimized;
  * @Author: Bruce
  * @Datetime: 2018/3/20 17:34
  */
-public class PrimitiveCommandNode extends Node {
+public class PrimitiveCommandNode extends AbstractNode {
 
     /**
      * PRINT

@@ -1,7 +1,5 @@
 package bugmakers.club.dp.behavioral.seq03.interpreter.demooptimized;
 
-import bugmakers.club.dp.structural.seq5.facade.structural.SystemC;
-
 import java.text.MessageFormat;
 import java.util.StringTokenizer;
 

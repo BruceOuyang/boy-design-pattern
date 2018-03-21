@@ -8,14 +8,14 @@ import java.util.Iterator;
  * @Author: Bruce
  * @Datetime: 2018/3/20 17:19
  */
-public class ExpressionNode extends Node {
+public class ExpressionNode extends AbstractNode {
 
     private static final String END = "END";
 
     /**
      * 定义一个集合用于存储多条命令
      */
-    private ArrayList<Node> list = new ArrayList<Node>();
+    private ArrayList<AbstractNode> list = new ArrayList<AbstractNode>();
 
     /**
      * 解释指令
@@ -38,7 +38,7 @@ public class ExpressionNode extends Node {
             }
             // 如果为其他标记，则解释标记并将其加入命令集合
             else{
-                Node commandNode = new CommandNode();
+                AbstractNode commandNode = new CommandNode();
                 list.add(commandNode);
             }
         }
@@ -49,7 +49,7 @@ public class ExpressionNode extends Node {
      */
     @Override
     public void execute() {
-        Iterator<Node> iterator = list.iterator();
+        Iterator<AbstractNode> iterator = list.iterator();
         while(iterator.hasNext()){
             iterator.next().execute();
         }

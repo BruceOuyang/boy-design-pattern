@@ -15,7 +15,7 @@ public class InterpreterContextDemoClient {
 
         Context context = new Context(text);
 
-        Node node = new ExpressionNode();
+        AbstractNode node = new ExpressionNode();
         node.interpret(context);
         node.execute();
     }

@@ -5,7 +5,7 @@ package bugmakers.club.dp.behavioral.seq03.interpreter.demooptimized;
  * @Author: Bruce
  * @Datetime: 2018/3/20 17:34
  */
-public class LoopCommandNode extends Node {
+public class LoopCommandNode extends AbstractNode {
 
     private static final String LOOP = "LOOP";
 
@@ -17,7 +17,7 @@ public class LoopCommandNode extends Node {
     /**
      * 循环语句中的表达式
      */
-    private Node commandNode;
+    private AbstractNode commandNode;
 
     /**
      * 解释循环命令

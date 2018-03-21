@@ -5,11 +5,11 @@ package bugmakers.club.dp.behavioral.seq03.interpreter.demooptimized;
  * @Author: Bruce
  * @Datetime: 2018/3/20 17:27
  */
-public class CommandNode extends Node {
+public class CommandNode extends AbstractNode {
 
     private static final String LOOP = "LOOP";
 
-    private Node node;
+    private AbstractNode node;
 
     @Override
     public void interpret(Context context) {
