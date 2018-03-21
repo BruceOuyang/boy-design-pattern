@@ -39,6 +39,7 @@ public class ExpressionNode extends AbstractNode {
             // 如果为其他标记，则解释标记并将其加入命令集合
             else{
                 AbstractNode commandNode = new CommandNode();
+                commandNode.interpret(context);
                 list.add(commandNode);
             }
         }

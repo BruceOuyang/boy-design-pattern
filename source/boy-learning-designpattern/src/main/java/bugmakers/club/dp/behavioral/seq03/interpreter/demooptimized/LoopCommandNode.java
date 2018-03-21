@@ -1,7 +1,7 @@
 package bugmakers.club.dp.behavioral.seq03.interpreter.demooptimized;
 
 /**
- * @Description:
+ * @Description: 循环命令节点类：非终结符表达式
  * @Author: Bruce
  * @Datetime: 2018/3/20 17:34
  */

@@ -38,7 +38,7 @@ public class PrimitiveCommandNode extends AbstractNode {
         if(!PRINT.equals(name) && !BREAK.equals(name) && !SPACE.equals(name)){
             System.err.println("非法命令！");
         }
-        if(PRINT.equals("PRINT")){
+        if(PRINT.equals(name)){
             text = context.currentToken();
             context.nextToken();
         }

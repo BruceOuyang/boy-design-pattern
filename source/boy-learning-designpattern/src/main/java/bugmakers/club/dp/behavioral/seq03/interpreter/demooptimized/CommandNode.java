@@ -17,7 +17,6 @@ public class CommandNode extends AbstractNode {
         // 处理LOOP循环命令
         if(LOOP.equals(context.currentToken())){
             node = new LoopCommandNode();
-            node.interpret(context);
         }
         // 处理其他基本命令
         else{
