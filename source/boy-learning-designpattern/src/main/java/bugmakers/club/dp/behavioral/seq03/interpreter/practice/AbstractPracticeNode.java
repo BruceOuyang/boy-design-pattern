@@ -8,13 +8,14 @@ package bugmakers.club.dp.behavioral.seq03.interpreter.practice;
 public abstract class AbstractPracticeNode {
 
     /**
-     * 声明一个方法用于解释语句
+     * 解释语句
      * @param context
+     * @throws ErrExpressionException
      */
-    public abstract void interpret(PracticeContext context);
+    public abstract void interpret(PracticeContext context) throws ErrExpressionException;
 
     /**
-     * 声明一个方法用于执行标记对应的命令
+     * 执行命令
      */
     public abstract void execute();
 }

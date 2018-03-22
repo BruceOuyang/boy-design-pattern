@@ -6,9 +6,14 @@ import java.util.StringTokenizer;
 /**
  * @Description: 环境类：用于存储和操作需要解释的语句
  * @Author: Bruce
- * @Datetime: 2018/3/21 17:11
+ * @Datetime: 2018/3/22 10:19
  */
 public class PracticeContext {
+
+    /**
+     * 用于记录原始指令表达式
+     */
+    private String text;
 
     /**
      * 用于将字符串分解为更小的字符串标记(Token)，默认情况下以空格作为分隔符
@@ -25,6 +30,7 @@ public class PracticeContext {
      * @param text
      */
     public PracticeContext(String text){
+        this.text = text;
         tokenizer = new StringTokenizer(text);
         nextToken();
     }
@@ -61,5 +67,9 @@ public class PracticeContext {
             System.err.println(MessageFormat.format("错误提示：{0}解释错误！", currentToken));
         }
         nextToken();
+    }
+
+    public String getText() {
+        return text;
     }
 }
