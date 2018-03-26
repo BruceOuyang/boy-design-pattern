@@ -24,22 +24,34 @@ public class ConcreteMediator extends Mediator {
 
         // 单击按钮
         if(component == button){
-            System.out.println("--单击添加按钮--");
-            list.update();
-            comboBox.update();
-            textBox.update();
+            buttonChanged();
         }
         // 从列表框选择客户
         else if(component == list){
-            System.out.println("--从列表框选择客户--");
-            list.select();
-            textBox.setText();
+            listChanged();
         }
         // 从组合框选择客户
         else if(component == comboBox){
-            System.out.println("--从组合框选择客户--");
-            comboBox.select();
-            textBox.setText();
+            comboBoxChanged();
         }
+    }
+
+    protected void buttonChanged(){
+        System.out.println("--单击添加按钮--");
+        list.update();
+        comboBox.update();
+        textBox.update();
+    }
+
+    protected void listChanged(){
+        System.out.println("--从列表框选择客户--");
+        list.select();
+        textBox.setText();
+    }
+
+    protected void comboBoxChanged(){
+        System.out.println("--从组合框选择客户--");
+        comboBox.select();
+        textBox.setText();
     }
 }
