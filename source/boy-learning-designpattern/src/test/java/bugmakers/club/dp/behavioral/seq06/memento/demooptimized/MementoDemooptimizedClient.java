@@ -77,7 +77,7 @@ public class MementoDemooptimizedClient {
         System.out.println("******撤销悔棋******");
         index ++;
 
-        //恢复到下一个备忘录
+        // 恢复到下一个备忘录
         chess.restore(mc.getMemento(i+1));
 
         // 展示
