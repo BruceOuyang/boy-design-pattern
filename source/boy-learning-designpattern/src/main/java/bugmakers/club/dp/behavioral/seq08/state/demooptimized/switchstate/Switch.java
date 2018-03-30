@@ -1,4 +1,4 @@
-package bugmakers.club.dp.behavioral.seq08.state.demooptimized;
+package bugmakers.club.dp.behavioral.seq08.state.demooptimized.switchstate;
 
 /**
  * @Description: 开关类

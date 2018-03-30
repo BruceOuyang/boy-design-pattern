@@ -1,11 +1,13 @@
 package bugmakers.club.dp.behavioral.seq08.state.demooptimized;
 
+import bugmakers.club.dp.behavioral.seq08.state.demooptimized.switchstate.Switch;
+
 /**
  * @Description:
  * @Author: Bruce
  * @Datetime: 2018/3/29 17:53
  */
-public class StateDemooptimizedClient {
+public class StateDemoSwitchClient {
 
     /**
      * 程序启动入口
