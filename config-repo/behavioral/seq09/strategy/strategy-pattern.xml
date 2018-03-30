@@ -1,4 +1,4 @@
 <?xml version="1.0"?>
 <config>
-
+    <className>bugmakers.club.dp.behavioral.seq09.strategy.demo.StudentDiscount</className>
 </config>
