@@ -20,8 +20,7 @@ public class StrategyXMLUtil {
     public static Object getBean(){
         try {
             //创建文档对象
-            DocumentBuilderFactory dFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = dFactory.newDocumentBuilder();
+            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
             Document doc;
             doc = builder.parse(new File(STRATEGY_CONFIG));
 
