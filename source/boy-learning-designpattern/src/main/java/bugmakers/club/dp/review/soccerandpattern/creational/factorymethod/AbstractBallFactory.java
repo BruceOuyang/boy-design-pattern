@@ -7,27 +7,12 @@ package bugmakers.club.dp.review.soccerandpattern.creational.factorymethod;
  * @Author: Bruce
  * @Datetime: 2018/4/11 17:43
  */
-public class AbstractBallFactory {
-
-    public static final String NIKE = "nike";
-    public static final String KAPPA = "kappa";
-    public static final String ADIDAS = "adidas";
+public abstract class AbstractBallFactory {
 
     /**
      * 创建足球
-     * @param brand
      * @return
      */
-    public AbstractBall createBall(String brand) {
-        AbstractBall ball = null;
-        if(NIKE.equalsIgnoreCase(brand)){
-            ball = new NikeBall();
-        } else if(KAPPA.equalsIgnoreCase(brand)){
-            ball = new KappaBall();
-        } else if(ADIDAS.equalsIgnoreCase(brand)){
-            ball = new AdidasBall();
-        }
-        return ball;
-    }
+    public abstract AbstractBall createBall();
 }
 

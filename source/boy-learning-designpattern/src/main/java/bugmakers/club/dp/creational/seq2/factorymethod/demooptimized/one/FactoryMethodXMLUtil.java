@@ -18,7 +18,7 @@ public class FactoryMethodXMLUtil {
     /**
      * 配置文件路径
      */
-    private static final String FACTORY_METHOD_CONFIG = "config-repo/creational/seq2/factorymethod/factory-method-pattern.xml";
+    private static final String FACTORY_METHOD_CONFIG = "config-repo/creational/seq2/simplefactory/abstractfactory-method-pattern.xml";
 
     public static Object getBean(){
         try {

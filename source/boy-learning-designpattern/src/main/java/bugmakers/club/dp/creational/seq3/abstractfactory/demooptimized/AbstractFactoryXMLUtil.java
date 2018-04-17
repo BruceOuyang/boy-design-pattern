@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class AbstractFactoryXMLUtil {
 
-    private static final String ABSTRACT_FACTORY_CONFIG = "config-repo/creational/seq3/abstractfactory/abstract-factory-pattern.xml";
+    private static final String ABSTRACT_FACTORY_CONFIG = "config-repo/creational/seq3/abstractfactory/abstract-abstractfactory-pattern.xml";
 
     /**
      * 该方法用于从XML配置文件中提取具体类类名，并返回一个实例对象

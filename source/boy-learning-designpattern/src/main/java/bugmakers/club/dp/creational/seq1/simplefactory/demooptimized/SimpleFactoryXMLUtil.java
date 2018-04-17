@@ -15,11 +15,11 @@ public class SimpleFactoryXMLUtil {
     /**
      * demo优化的配置文件
      */
-    private static final String SIMPLE_FACTORY_CONFIG = "config-repo/creational/seq1/simplefactory/simple-factory-config.xml";
+    private static final String SIMPLE_FACTORY_CONFIG = "config-repo/creational/seq1/simplefactory/simple-abstractfactory-config.xml";
     /**
      * 练习题的配置文件
      */
-    private static final String SIMPLE_FACTORY_PRACTICE_CONFIG = "config-repo/creational/seq1/simplefactory/simple-factory-practice-config.xml";
+    private static final String SIMPLE_FACTORY_PRACTICE_CONFIG = "config-repo/creational/seq1/simplefactory/simple-abstractfactory-practice-config.xml";
 
     /**
      * 从XML配置文件中提取图表类型，并返回类型名
